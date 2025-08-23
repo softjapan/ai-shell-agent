@@ -8,7 +8,7 @@ AIを使用して自然言語からシェルコマンドを自動生成し、安
 
 ## 🎥 デモ
 
-https://github.com/softjapan/ai-shell-agent/assets/demo.mov
+https://github.com/user-attachments/assets/21d4e708-f436-4887-9c21-ed1e0e4f2a32
 
 ## ✨ 特徴
 
