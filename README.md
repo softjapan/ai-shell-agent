@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-AIを使用して自然言語からシェルコマンドを自動生成し、安全に実行するためのエージェントツールです。
+AIを使用して自然言語からシェルコマンドを自動生成し、安全に実行するためのエージェントツール
 
 ## 🎥 デモ
 
