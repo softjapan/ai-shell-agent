@@ -90,7 +90,7 @@ def main() -> None:
     if answer.success and answer.cmd is not None:
         print(f"[AI Answer]: {answer.cmd}")
         y_or_n = input("Execute? Y/N: ")
-        if y_or_n in ["y", "Y","ｙ","Ｙ"]:
+        if y_or_n in ["y", "Y","ｙ","Ｙ","yes","Yes","YES"]:
             os.system(answer.cmd)
     else:
         print(f"(AI Answer): {answer.failure}")
