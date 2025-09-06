@@ -9,8 +9,6 @@ from pydantic_ai import Agent
 from pydantic_ai.models.google import GoogleModel
 from pydantic_ai.providers.google import GoogleProvider
 
-import os
-
 # 環境変数からAPIキーを取得
 GEMINI_KEY = os.getenv("GEMINI_API_KEY", "")
 
