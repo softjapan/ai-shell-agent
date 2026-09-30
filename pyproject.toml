@@ -1,9 +1,68 @@
 [project]
-name = "uv-ai-tools"
-version = "0.1.0"
-description = "Add your description here"
+name = "ai-shell-agent"
+version = "0.3.0"
+description = "Generate, inspect, and safely execute shell commands with Google Gemini or OpenAI"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-    "pydantic-ai>=0.7.4",
+license = { file = "LICENSE" }
+authors = [{ name = "softjapan" }]
+keywords = ["ai", "cli", "gemini", "openai", "shell"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
+dependencies = [
+    "google-genai==1.31.0",
+    "httpx==0.28.1",
+    "openai==1.99.9",
+    "pydantic==2.11.7",
+    "pydantic-ai-slim[google,openai]==0.7.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/softjapan/ai-shell-agent"
+Issues = "https://github.com/softjapan/ai-shell-agent/issues"
+
+[project.scripts]
+ai-shell-agent = "ai_shell_agent.cli:entrypoint"
+
+[dependency-groups]
+dev = [
+    "black==25.1.0",
+    "pyright==1.1.405",
+    "pytest==8.4.1",
+    "ruff==0.12.9",
+]
+
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ai_shell_agent"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312", "py313"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "RUF", "SIM", "UP"]
+
+[tool.pyright]
+include = ["ai_shell_agent", "tests", "as.py"]
+pythonVersion = "3.10"
+typeCheckingMode = "standard"
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers -q"
+testpaths = ["tests"]
