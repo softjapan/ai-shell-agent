@@ -21,6 +21,9 @@ Google GeminiまたはOpenAIを使って自然言語からシェルコマンド�
 - **構造化出力**：Pydanticモデルで成功・失敗、単一行、最大長などを検証します。
 - **秘密情報を抑制**：APIエラー本文や作業ディレクトリのフルパスをAIへのプロンプトに含めません。
 
+https://github.com/user-attachments/assets/59b2d820-ced1-4305-b7a4-1943b7d0db94
+
+
 ## 必要環境
 
 - Python 3.10以上
